@@ -1,0 +1,13 @@
+this is the feature list 
+this will help us to keep track what features I need to build
+
+user goes to website straight away he can browse rooms/hotels/appartments/cabins 
+check prices reviews and stuff
+
+but he need to login to give review or book a rooms
+also if he wants to list a property he need to login
+
+property prices address reviews features and stuff you go to book then you can talk to ownwer
+in owner notification box he will get notifications also maybe you can get owners contact details 
+
+so thats good people use and go 

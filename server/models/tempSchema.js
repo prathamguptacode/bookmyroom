@@ -15,6 +15,7 @@ const tempSchema=new mongoose.Schema({
     joinedAt:{
         type:Date,
         default:Date.now
-    }
+    },
+    otp:Number
 })
 module.exports = mongoose.model('temp',tempSchema)
