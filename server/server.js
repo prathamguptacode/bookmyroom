@@ -12,4 +12,11 @@ app.get('/',(req,res)=>{
 const signup=require('./routes/signup')
 app.use(signup)
 
+const login=require('./routes/login')
+app.use(login)
+
+const verify=require('./routes/verify')
+app.use(verify)
+
+
 app.listen(process.env.PORT,()=> console.log('listening port '+process.env.PORT))
