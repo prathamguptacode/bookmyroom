@@ -11,7 +11,7 @@ async function login(req,res) {
         return res.status(403).send('invalid user')
     }
     if(user.password == password){
-        const refreshToken=jwt.sign({email},process.env.ACCESSTOKEN)
+        const refreshToken=jwt.sign({email},process.env.REFRESHTOKEN)
         const accessToken=jwt.sign({email},process.env.ACCESSTOKEN,{expiresIn: '1h'})
         res.cookie('refreshToken',refreshToken,{httpOnly:true})
         res.json({message: 'hello user', accessToken})

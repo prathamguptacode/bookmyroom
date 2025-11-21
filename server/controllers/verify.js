@@ -27,8 +27,8 @@ async function verify(req, res) {
             const newuser = new User(user.toObject())
             const data=await newuser.save()
             //give tokens
-            const refreshToken=jwt.sign({emai: user.email},process.env.REFRESHTOKEN)
-            const accessToken=jwt.sign({emai: user.email},process.env.ACCESSTOKEN,{expiresIn: '12m'})
+            const refreshToken=jwt.sign({email: user.email},process.env.REFRESHTOKEN)
+            const accessToken=jwt.sign({email: user.email},process.env.ACCESSTOKEN,{expiresIn: '12m'})
             res.cookie('refreshToken',refreshToken,{httpOnly: true})
             res.status(201).json({ message: 'congrations user created',data,accessToken})
         }

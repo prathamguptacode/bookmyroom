@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const {Schema}=require('mongoose')
 const userSchema=new mongoose.Schema({
     name:{
         type:String,
@@ -12,6 +13,10 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    property:[{
+        type: Schema.Types.ObjectId,
+        ref: 'rooms'
+    }],
     joinedAt:{
         type:Date,
         default:Date.now

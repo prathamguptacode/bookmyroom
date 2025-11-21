@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const {Schema}=require('mongoose')
 const roomSchema=new mongoose.Schema({
     name:{
         type:String,
@@ -13,7 +14,7 @@ const roomSchema=new mongoose.Schema({
         required:true
     },
     popularFacilities:{
-        type:[String],
+        type:String,
         required:true
     },
     price:{
@@ -26,9 +27,19 @@ const roomSchema=new mongoose.Schema({
     },
     review:Number,
     Comment:String,
-    Block:{
+    // Block:{
+    //     type:String,
+    //     required:true
+    // }
+    city:{
         type:String,
-        required:true
+        required:true,
+        lowercase:true
+    },
+    createdAt:{
+        type:Date,
+        required: true,
+        default:Date.now
     }
 })
 module.exports = mongoose.model('rooms',roomSchema)
