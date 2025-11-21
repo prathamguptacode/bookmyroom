@@ -7,19 +7,23 @@
     align-items: center;
 }
 .uppernav{
-    padding: 16px 0;
+    padding: 16px;
 }
 .rnuppernav{
-    gap: 16px;
+    gap: 12px;
     margin-left: auto;
 }
 
 .logobx{
     color: white;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 500;
     cursor: pointer;
     flex-shrink: 0;
+}
+.countrywrapper{
+    padding: 8px 8px;
+    border-radius: 5px;
 }
 .country{
     width: 30px;
@@ -36,14 +40,18 @@
     filter: invert(1);
     width: 28px;
     flex-shrink: 0;
+    cursor: pointer;
+    padding: 8px 8px;
+    border-radius: 5px;
 }
 .addprop{
     all: unset;
     cursor: pointer;
-    padding: 0 4px;
     color: white;
     font-weight: 500;
     flex-shrink: 0;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 .signup, .login{
     all: unset;
@@ -61,14 +69,15 @@
     max-width: 1200px;
 }
 .lowernav{
-    gap: 16px;
+    gap: 4px;
 }
 .opt{
     color: white;
     font-size: 16px;
     cursor: pointer;
-    padding: 16px 0;
+    padding: 8px 16px;
+    border-radius: 30px;
 }
-.opt:hover{
+.hover:hover{
     background-color: #214FA0;
 }
