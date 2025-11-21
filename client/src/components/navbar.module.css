@@ -1,0 +1,74 @@
+.navbar{
+    background-color: #003B95;
+    height: 120px;
+}
+.lowernav, .uppernav, .rnuppernav{
+    display: flex;
+    align-items: center;
+}
+.uppernav{
+    padding: 16px 0;
+}
+.rnuppernav{
+    gap: 16px;
+    margin-left: auto;
+}
+
+.logobx{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.country{
+    width: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.countryImg{
+    object-fit: cover;
+    scale: 1.2;
+}
+.info{
+    filter: invert(1);
+    width: 28px;
+    flex-shrink: 0;
+}
+.addprop{
+    all: unset;
+    cursor: pointer;
+    padding: 0 4px;
+    color: white;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+.signup, .login{
+    all: unset;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #2566c9;
+    font-weight: 500;
+}
+.wrapperNav{
+    margin: auto;
+    max-width: 1200px;
+}
+.lowernav{
+    gap: 16px;
+}
+.opt{
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 16px 0;
+}
+.opt:hover{
+    background-color: #214FA0;
+}
