@@ -1,0 +1,21 @@
+.offers{
+    max-width: 1200px;
+    margin: auto;
+    padding: 36px 0;
+}
+.title{
+    font-size: 28px;
+    font-weight: 600;
+    padding: 2px 0;
+}
+.can{
+    color: rgba(0, 0, 0, 0.8);
+    padding: 2px 0;
+}
+.cardcan{
+    padding: 16px 0 ;
+    width: 100%;
+    display: flex;
+    gap: 28px;
+    overflow-y: auto;
+}

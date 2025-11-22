@@ -1,0 +1,17 @@
+.hotelrow{
+    padding: 24px 0;
+    max-width: 1200px;
+    margin: auto;
+
+}
+.title{
+    font-size: 28px;
+    font-weight: 800;
+    padding: 20px 0;
+}
+.row{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    overflow-y: auto;
+}
