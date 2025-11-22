@@ -63,9 +63,10 @@
     flex-grow: 1;
     cursor: pointer;
     padding: 0 8px;
+    color: black;
 }
-.date{
-    color: rgba(0, 0, 0, 0.49);
+.expand::placeholder{
+    color: black;
 }
 .guestnum{
     display: flex;
@@ -82,8 +83,43 @@
 }
 .dropguest{
     position: absolute;
-    background-color: red;
-    top: 110%;
+    top: 115%;
     left: 0;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background-color: white;
+    border-radius: 5px;
+}
+.parentbx{
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.bx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.addbx{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    gap: 12px;
+    /* font-size: 16px; */
+    overflow: hidden;
+}
+.conbx{
+    font-size: 17px;
+}
+.bxsvg{
+    width: 26px;
+}
+.imgbx{
+    padding: 4px;
+}
+.imgbx:hover{
+    background-color: #F2F6FE;
 }
