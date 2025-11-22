@@ -1,0 +1,89 @@
+.bannerimg{
+    background: #01050E;
+    background: linear-gradient(84deg, rgba(1, 5, 14, 1) 1%, rgba(4, 28, 67, 1) 20%, rgba(4, 28, 67, 1) 80%, rgba(1, 5, 14, 1) 100%);
+    width: 100%;
+    height: 375px;
+    display: flex;
+    align-items: center;
+}
+.can{
+    flex-basis: auto;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.childcan{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.title{
+    padding: 0px 12px;
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+}
+.content{
+    padding: 0 12px;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    width: 480px;
+}
+.imgcan{
+    width: 350px;
+}
+.searchbox{
+    max-width: 1200px;
+    background-color: rgb(255, 199, 44);
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    margin: auto;
+    border-radius: 4px;
+    margin-top: -24px;
+}
+.searchbtn{
+    all: unset;
+    background-color: #016CE4;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.expand{
+    all: unset;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.date{
+    color: rgba(0, 0, 0, 0.49);
+}
+.guestnum{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    user-select: none;
+}
+.insvg{
+    width: 20px;
+}
+.inperson{
+    width: 24px;
+}
+.dropguest{
+    position: absolute;
+    background-color: red;
+    top: 110%;
+    left: 0;
+    width: 100%;
+}
