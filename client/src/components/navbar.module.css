@@ -64,6 +64,12 @@
     color: #2566c9;
     font-weight: 500;
 }
+.signup:hover{
+    background-color: #F2F6FE;
+}
+.login:hover{
+    background-color: #F2F6FE;
+}
 .wrapperNav{
     margin: auto;
     max-width: 1200px;
@@ -80,4 +86,21 @@
 }
 .hover:hover{
     background-color: #214FA0;
+}
+.profile{
+    gap: 4px;
+    cursor: pointer;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.profileimgbx{
+    flex-shrink: 0;
+    width: 36px;
+}
+.profilename{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
 }

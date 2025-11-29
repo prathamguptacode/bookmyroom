@@ -1,0 +1,48 @@
+.navbar{
+    background-color: #003B95;
+    padding: 12px;
+}
+.newnav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logobx{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.countrywrapper{
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+.country{
+    width: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.countryImg{
+    object-fit: cover;
+    scale: 1.2;
+}
+.info{
+    filter: invert(1);
+    width: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+.rnuppernav{
+    display: flex;
+    gap: 8px;
+}
+.hover:hover{
+    background-color: #214FA0;
+}

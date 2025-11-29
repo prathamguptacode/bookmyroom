@@ -7,3 +7,9 @@ img{
     display: block;
     max-width: 100%;
 }
+a{
+    all: unset;
+}
+.inputerror::placeholder{
+    color: rgb(245, 75, 75);
+}

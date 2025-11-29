@@ -1,0 +1,51 @@
+.otpbox{
+    max-width: 400px;
+    margin: 60px auto;
+}
+.emailbx{
+    max-width: 440px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.con, .terms{
+    font-size: 16px;
+    color: rgba(12, 12, 12, 0.7);
+}
+.nobx{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.inbx{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.emaillabel{
+    font-size: 15px;
+}
+.emailin{
+    padding: 8px;
+}
+.submitbtn{
+    all: unset;
+    margin: 8px 0;
+    background-color: #016CE4;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submitbtn:hover{
+    background-color: #0057B8;
+}
+.terms{
+    font-size: 12px;
+}
