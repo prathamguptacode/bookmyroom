@@ -7,7 +7,10 @@ const cors=require('cors')
 const cookieParser=require('cookie-parser')
 mongoose.connect(process.env.DB_URL).then(()=> console.log('connected to database'));
 
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+}))
 app.use(cookieParser())
 
 app.get('/',(req,res)=>{
@@ -37,5 +40,8 @@ app.use(view)
 
 const recent=require('./routes/recentlyVisited')
 app.use(recent)
+
+const name=require('./routes/getname')
+app.use(name)
 
 app.listen(process.env.PORT,()=> console.log('listening port '+process.env.PORT))

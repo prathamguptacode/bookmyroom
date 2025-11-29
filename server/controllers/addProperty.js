@@ -14,7 +14,7 @@ async function addProperty(req, res) {
         const address = req.body?.address;
         const city = req.body?.city;
         if ((!name) || (!owner) || (!description) || (!popularFacilities) || (!price) || (!address) || (!city)) {
-            return res.json({ message: 'invalid data missing data' })
+            return res.status(400).json({ message: 'invalid data missing data' })
         }
         const property = new Property({ name, owner, description, popularFacilities, price, address, city })
         const data = await property.save()

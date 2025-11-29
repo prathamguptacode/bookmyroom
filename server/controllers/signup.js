@@ -1,4 +1,5 @@
 const temp = require('../models/tempSchema')
+const user = require('../models/userSchema')
 const jwt = require('jsonwebtoken')
 const nodeMailer = require('nodemailer')
 const otpgen = require('otp-generator')
@@ -12,6 +13,19 @@ async function signup(req, res) {
             return res.status(400).json({ message: 'invalid data' })
         }
         //enable express validation
+        const emailreg = /^(?!.*\.\.)(?!\.)[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
+        const passreg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_\-+\[\]{}|\\;:'",.<>/?`~])[A-Za-z\d!@#$%^&*()_\-+\[\]{}|\\;:'",.<>/?`~]{8,}$/;
+        if(!emailreg.test(email)){
+            return res.status(403).json({message: 'not  valid email'})
+        }
+        if(!passreg.test(password)){
+            return res.status(403).json({message: 'esay password'})
+        }
+        //chrking that user already be in db
+        const inuser=await user.findOne({email})
+        if(inuser){
+            return res.status(403).json({message: 'user already exists'})
+        }
 
         const otp=sendOtp(email,name)
         console.log(otp)
@@ -21,7 +35,7 @@ async function signup(req, res) {
         const signupToken = jwt.sign({ email: email }, process.env.SIGNUPTOKEN, { expiresIn: '10m' })
         const tempUser = new temp({ name, email, password, otp})
         await tempUser.save()
-        res.json({ message: 'temp-user created otp validation required', signupToken: `Bearer ${signupToken}` })
+        res.json({ message: 'temp-user created otp validation required', signupToken: `${signupToken}` })
         console.log('say chesse')
     } catch (error) {
         console.log(error.message)

@@ -8,7 +8,7 @@ async function login(req,res) {
     }
     const user=await User.findOne({email})
     if(!user){
-        return res.status(403).send('invalid user')
+        return res.status(403).json({message:'invalid user'})
     }
     if(user.password == password){
         const refreshToken=jwt.sign({email},process.env.REFRESHTOKEN)
@@ -17,7 +17,7 @@ async function login(req,res) {
         res.json({message: 'hello user', accessToken})
         return 
     }
-    res.json({message: 'invalid password'})
+    res.status(403).json({message: 'invalid password'})
 }
 
 module.exports=login
