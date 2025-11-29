@@ -14,8 +14,14 @@ function Homepage() {
   useEffect(()=>{
     (async () => {
       try {
-        const res=await api.post('/getname',{token: value.access})
-        setUsername(res.data.user)
+        try {
+          const res1=await api.post('/refresh')
+          const res2=await api.post('/getname',{token: res1.data.accessToken})
+          setUsername(res2.data.user)
+        } catch (error) {
+          const res=await api.post('/getname',{token: value.access})
+          setUsername(res.data.user)
+        }
       } catch (error) {
         console.log(error)
       }

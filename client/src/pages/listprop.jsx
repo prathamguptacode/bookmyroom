@@ -9,7 +9,7 @@ import Successpage from '../components/successpage'
 function Listprop() {
     const [con, setCon] = useState()
     const [errorDis, setErrorDis] = useState('none')//for error messages
-    const [flag,setFlag]=useState(0)//for success page
+    const [flag,setFlag]=useState(false)//for success page
     const value = useContext(Access)
     const navigate = useNavigate()
     useEffect(() => {//only logged in user can access the page
@@ -74,7 +74,7 @@ function Listprop() {
         try {
             const res = await api.post('/addproperty', body)
             console.log(res)
-            setFlag(1)
+            setFlag(true)
         } catch (error) {
             console.log(error)
         }
@@ -125,7 +125,9 @@ function Listprop() {
                 </div>
                 <button onClick={submit}>submit</button>
                 <Errormessage title={'something went wrong'} con={con} errorDis={errorDis} setErrorDis={setErrorDis} ></Errormessage>
-                <Successpage flag={flag}></Successpage>
+                {
+                    flag&&<Successpage></Successpage>
+                }
             </div>
         </div>
     )

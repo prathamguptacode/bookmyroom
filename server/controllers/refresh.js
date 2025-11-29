@@ -2,7 +2,7 @@ const jwt=require('jsonwebtoken')
 async function refresh(req,res) {
     const token=req.cookies?.refreshToken
     if(!token){
-        return res.json({message: 'token not found'})
+        return res.status(400).json({message: 'token not found'})
     }
     let userEmail;
     jwt.verify(token,process.env.REFRESHTOKEN,(err,val)=>{
